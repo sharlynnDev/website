@@ -19,12 +19,13 @@ echo "size after $(stat -c %s $CSS_FOLDER/main.css)"
 # write to staging
 echo "send to staging? [y/N]"
 read staging
-if staging == "y"
+if [ "$staging" == "y" ]; then
     echo "user:"
     read user
     echo "domain:"
     read domain
-rsync -av public/* $user@$domain:/var/www/html
+    echo rsync -av --progress public/* "$user@$domain":/var/www/html
+    # rsync -av --progress public/* "$user@$domain":/var/www/html
 fi
 
 
