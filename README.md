@@ -13,6 +13,7 @@ TODO
 # TODO
 
 * how to inject api key's safely (https://docs.travis-ci.com/user/encryption-keys/)
+* https://github.com/dimsemenov/PhotoSwipe gallery
 
 # Editing
 
@@ -32,3 +33,10 @@ TODO
         * webhook to sharlynn.com.au/webhook/deploy
 * https://github.com/olipo186/Git-Auto-Deploy will recieve the hook and pull gitlab/sharlynn/(_site branch)
 * archive 100mb of previous websites, log the diff, write to /var/www
+
+# Reasoning
+
+* why use docker?
+    * using travis ci without docker will give me a version of nodejs and ruby that I don't want
+* why can't i just use image:whatever/node-ruby image?
+    * I'm unsure how to do persistance/artifacts etc at the moment

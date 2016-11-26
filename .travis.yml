@@ -1,0 +1,26 @@
+sudo: required
+
+language: ruby
+
+env:
+    - REPO="https://github.com/sharlynnDev/website/"
+
+banches:
+    only:
+    - master
+
+services:
+    - docker
+
+before_install:
+    - docker run --label=jekyll \
+        -v $(pwd):/opt/jekyll \
+        -it -p 127.0.0.1:4000:4000 \
+        starefossen/ruby-node echo "$test"
+
+install:
+before_script:
+script:
+after_script:
+deploy:
+after_deploy:
