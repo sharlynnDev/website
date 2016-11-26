@@ -8,14 +8,27 @@
 
 # Development with docker
 
+TODO
 
+# TODO
+
+* how to inject api key's safely (https://docs.travis-ci.com/user/encryption-keys/)
 
 # Editing
 
-* Log into forestry.io to edit pages, posts, menu's.
+* Log into forestry.io (or domain/admin) to edit pages, posts, menu's.
 * forestry has write access to gitlab.  On CMS edit it will add posts/edits/changes to source.
-* on edit gitlab cli will run plugins and build (see .gitlab.ci.yml)
-* on build success gitlab will (do i write _site to new branch?)
-* on build success gitlab will webhook to sharlynn.com.au:8000
+* on edit travis ci will run plugins and build (see .gitlab.ci.yml)
+    * pull official jekyll docker image
+    * exec bundler jekyll build
+    * run optimise script
+        * uglify-js (on all non-lib files)
+        * cleancss (on all css files)
+        * store build artifacts
+        * move artifacts into build
+    * move build to branch "site"
+    * run deploy script
+        * get encrypted APIkey's/passwords
+        * webhook to sharlynn.com.au/webhook/deploy
 * https://github.com/olipo186/Git-Auto-Deploy will recieve the hook and pull gitlab/sharlynn/(_site branch)
 * archive 100mb of previous websites, log the diff, write to /var/www
