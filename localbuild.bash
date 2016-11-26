@@ -1,3 +1,5 @@
+#!/bin/sh
+
 JS_FOLDER=public/assets/js
 CSS_FOLDER=public/css
 
