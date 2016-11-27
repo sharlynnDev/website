@@ -18,6 +18,7 @@ before_install:
 install:
 before_script:
 script:
+    - docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 starefossen/ruby-node echo "$test"
 after_script:
 deploy:
 after_deploy:
