@@ -3,6 +3,7 @@
 * Log into forestry.io (or domain/admin) to edit pages, posts, menu's.
 * forestry has write access to gitlab.  On CMS edit it will add posts/edits/changes to source.
 * [Build](Build)
+* build my own docker image, because otherwise have to bundle install inside the container
 
 
 on edit travis ci will run plugins and build (see .gitlab.ci.yml)
