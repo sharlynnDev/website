@@ -1,6 +1,8 @@
 #!/bin/sh
 
-echo $test; echo $VOLUME; echo $JS_FOLDER;
+echo $test
+echo $VOLUME
+echo $JS_FOLDER
 cd /opt/jekyll
 bundle install
 bundle exec jekyll build --source web/ --destination "$PRETTY_BUILD_FOLDER"
