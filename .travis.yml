@@ -13,8 +13,9 @@ install:
 before_script:
 - docker pull starefossen/ruby-node
 script:
+- docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 starefossen/ruby-node ls -lah; pwd;
 - docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 starefossen/ruby-node
-  scripts/jekyllBuild.sh
+  ./scripts/jekyllBuild.sh
 after_script: 
 
 deploy:
