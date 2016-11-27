@@ -10,7 +10,7 @@ ruby "2.3.1"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "3.2.0"
-
+gem "rake"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 
 
