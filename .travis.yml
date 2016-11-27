@@ -1,12 +1,14 @@
 sudo: required
+
 language: ruby
 
 env:
-- VOLUME="/opt/jekyll"
-- PRETTY_BUILD_FOLDER=$VOLUME/builds/pretty
-- BUILD_FILE="$VOLUME/builds/ugly.zip"
-- JS_FOLDER="$PRETTY_BUILD_FOLDER/assets/js"
-- CSS_FOLDER="$PRETTY_BUILD_FOLDER/css"
+  global:
+  - VOLUME="/opt/jekyll"
+  - PRETTY_BUILD_FOLDER="$VOLUME/builds/pretty"
+  - BUILD_FILE="$VOLUME/builds/ugly.zip"
+  - JS_FOLDER="$PRETTY_BUILD_FOLDER/assets/js"
+  - CSS_FOLDER="$PRETTY_BUILD_FOLDER/css"
 
 banches:
   only:
