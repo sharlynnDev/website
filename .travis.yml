@@ -13,12 +13,11 @@ services:
     - docker
 
 before_install:
-    - docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 starefossen/ruby-node echo "$test"
-
 install:
 before_script:
+    - docker pull starefossen/ruby-node
 script:
-    - docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 starefossen/ruby-node echo "$test"
+    - docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 starefossen/ruby-node echo "$test"; ls -lah; pwd
 after_script:
 deploy:
 after_deploy:
