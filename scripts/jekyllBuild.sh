@@ -24,5 +24,6 @@ echo "size before $(stat -c %s $CSS_FOLDER/main.css)"
 cleancss -o $CSS_FOLDER/main.css $CSS_FOLDER/main.css
 echo "size after $(stat -c %s $CSS_FOLDER/main.css)"
 
+apt-get install zip
 zip -r $PRETTY_BUILD_FOLDER $BUILD_FILE
 echo completed build: $BUILD_FILE
