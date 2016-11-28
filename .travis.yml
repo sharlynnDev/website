@@ -21,8 +21,13 @@ install:
 before_script:
 - docker pull starefossen/ruby-node
 script:
-- docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 starefossen/ruby-node echo $test; echo $VOLUME; echo $JS_FOLDER; /bin/sh /opt/jekyll/scripts/jekyllBuild.sh
-- docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 starefossen/ruby-node /bin/sh /opt/jekyll/scripts/jekyllBuild.sh
+- docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 \
+-e VOLUME=$VOLUME \
+-e PRETTY_BUILD_FOLDER=$PRETTY_BUILD_FOLDER \
+-e BUILD_FILE=$BUILD_FILE \
+-e JS_FOLDER=$JS_FOLDER \
+-e CSS_FOLDER=$CSS_FOLDER \
+starefossen/ruby-node /bin/sh /opt/jekyll/scripts/jekyllBuild.sh
 
 after_script: 
 
