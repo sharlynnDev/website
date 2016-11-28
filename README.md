@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sharlynnDev/website.svg?branch=master)](https://travis-ci.org/sharlynnDev/website)
+
 # Blog Post
 
 * Log into forestry.io (or domain/admin) to edit pages, posts, menu's.
