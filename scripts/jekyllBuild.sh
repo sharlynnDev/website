@@ -26,5 +26,5 @@ echo "size after $(stat -c %s $CSS_FOLDER/main.css)"
 
 apt-get update
 apt-get install zip -y
-zip -r $PRETTY_BUILD_FOLDER $BUILD_FILE
+zip -r $BUILD_FILE $PRETTY_BUILD_FOLDER
 echo completed build: $BUILD_FILE
