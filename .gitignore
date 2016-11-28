@@ -4,3 +4,4 @@ _site
 public/
 .bundle/
 builds/
+Gemfile.lock
