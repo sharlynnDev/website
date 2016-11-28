@@ -17,16 +17,17 @@ services:
 - docker
 before_install: 
 install:
- 
+
 before_script:
 - docker pull starefossen/ruby-node
 script:
-- docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 \
+- docker run --label=jekyll -v $(pwd):/opt/jekyll -it \
 -e VOLUME=$VOLUME \
 -e PRETTY_BUILD_FOLDER=$PRETTY_BUILD_FOLDER \
 -e BUILD_FILE=$BUILD_FILE \
 -e JS_FOLDER=$JS_FOLDER \
 -e CSS_FOLDER=$CSS_FOLDER \
+-p 127.0.0.1:4000:4000 \
 starefossen/ruby-node /bin/sh /opt/jekyll/scripts/jekyllBuild.sh
 
 after_script: 
