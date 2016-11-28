@@ -14,14 +14,15 @@ banches:
   only:
   - master
 services:
-- docker
+  - docker
 before_install: 
 install:
 
 before_script:
-- docker pull starefossen/ruby-node
-script: >
-- docker run --label=jekyll -v $(pwd):/opt/jekyll -it 
+  - docker pull starefossen/ruby-node
+script:
+  - > 
+docker run --label=jekyll -v $(pwd):/opt/jekyll -it 
 -e VOLUME=$VOLUME 
 -e PRETTY_BUILD_FOLDER=$PRETTY_BUILD_FOLDER 
 -e BUILD_FILE=$BUILD_FILE 
