@@ -41,5 +41,5 @@ deploy:
   file: $BUILD_FILE
   skip_cleanup: true
   on:
-    repo: sharlynnDev/website
+    tags: true
 after_deploy: 
