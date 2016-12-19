@@ -39,6 +39,7 @@ deploy:
   api_key:
     secure: xR1h546anHkGiwNQ6EoTR/Aurg98y0anzIPJqUU9suMTDrkyUb5PcXyyqLXZXn5vpXX3CC/DEmt8SS7T1065Of6olS+0wBuOnZ/5UB5amvr/s4kE4SJ5xGvmwBCSU+4eJqqZySNyTvKyqwHnE4C56o9oEk9eI5O5Sl812r8MNSD3plIF1NvwO/StmpShEvJvz/9aC0+DbAp9Q8alNORRuYABLBncKldDV9fpsWcZ6B8/1NhbHQmmk5IP8l6p/iYIybKudNkkcbA/Q7jwygycpxmDetIQ1+cYB2sRLKSEEUrUsF37GbHlZemGJjEXDrB0O9eHaZuyprwnZXZI79KW7wHg6gF7F8uLiBNyy45d417/4nNHbAM5fYwYf3c0gOUVTcLCYoxMujtzbEVRMtmwtEXIRynpey/XC87cADVY0IsNHKgv/Xwfv0a3GxZk17EwE5Czl/U9QIjgpl1hZL2kSinm76sDTBPJ+ar/KblmkdyOwu8Pel0Jq00Lnv3s6gKCuHKzQ6SN4wYaJPwBiInUUDgsngKi65J9sg+sO7G9vXlwPoJx5PxintUj+NfsGlHh6CSgsgetSnc5AQKzpi2PPlgqyWt6aHGHN9vWdrh7w6PbUDk9vuTD7qYKaiJR9/N1uwsD2C3NGIf1fdJU/v29Aezx9Lm9HRN1Km/MWM1+/4Y=
   file: $BUILD_FILE
+  skip_cleanup: true
   on:
     repo: sharlynnDev/website
 after_deploy: 

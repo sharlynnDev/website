@@ -8,7 +8,7 @@ export BUILD_FILE="$VOLUME/builds/ugly.zip"
 export JS_FOLDER="$PRETTY_BUILD_FOLDER/assets/js"
 export CSS_FOLDER="$PRETTY_BUILD_FOLDER/css"
 
-sudo docker run --verbose --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 \
+sudo docker run --label=jekyll -v $(pwd):/opt/jekyll -it -p 127.0.0.1:4000:4000 \
 -e VOLUME=$VOLUME \
 -e PRETTY_BUILD_FOLDER=$PRETTY_BUILD_FOLDER \
 -e BUILD_FILE=$BUILD_FILE \
