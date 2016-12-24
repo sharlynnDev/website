@@ -4,11 +4,12 @@ language: ruby
 
 env:
   global:
+  - JEKYLL_BUILD="/opt/jekyll/scripts/jekyllBuild.sh"
+  - DEPLOY="/opt/jekyll/scripts/deploy.sh"
   - VOLUME="/opt/jekyll"
-  - PRETTY_BUILD_FOLDER="$VOLUME/builds/pretty"
-  - BUILD_FILE="$VOLUME/builds/ugly.zip"
-  - JS_FOLDER="$PRETTY_BUILD_FOLDER/assets/js"
-  - CSS_FOLDER="$PRETTY_BUILD_FOLDER/css"
+  - BUILD_FILE="$/opt/jekyll/builds/ugly.zip"
+  - JS_FOLDER="$/opt/jekyll/builds/pretty/assets/js"
+  - CSS_FOLDER="$/opt/jekyll/builds/pretty/css"
 
 banches:
   only:
@@ -22,7 +23,7 @@ before_script:
   - docker pull starefossen/ruby-node
 script:
   - > 
-    docker run --label=jekyll -v $(pwd):/opt/jekyll -it 
+    docker run --label=jekyll -v $(pwd):$VOLUME -it 
     -p 127.0.0.1:4000:4000 
     -e VOLUME=$VOLUME 
     -e PRETTY_BUILD_FOLDER=$PRETTY_BUILD_FOLDER 
@@ -30,7 +31,7 @@ script:
     -e JS_FOLDER=$JS_FOLDER 
     -e CSS_FOLDER=$CSS_FOLDER 
     -e test=$test
-    starefossen/ruby-node /bin/sh /opt/jekyll/scripts/jekyllBuild.sh
+    starefossen/ruby-node /bin/sh $JEKYLL_BUILD
 
 after_script: 
 

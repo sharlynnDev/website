@@ -1,28 +1,23 @@
 [![Build Status](https://travis-ci.org/sharlynnDev/website.svg?branch=master)](https://travis-ci.org/sharlynnDev/website)
 
-# Blog Post
+# Users
+
+## make a blog post
 
 * Log into forestry.io (or domain/admin) to edit pages, posts, menu's.
-* forestry has write access to gitlab.  On CMS edit it will add posts/edits/changes to source.
+* forestry has write access to github.  On CMS edit it will add posts/edits/changes to source.
 * [Build](Build)
 * [Deploy](Deploy)
 
-
 # Build
-
-* dependencies install
-* uglify js
-* cleancss
-* zip to build.zip
-* release to github (deploy) or get to localhost *(how*?)
 
 ## Travis
 
 Travis ci automatically sets up an environment ready for builds
 
 * ruby environment
-* bundle install
 * docker service
+* pass to jekyllBuild.sh inside of docker
 
 ## Docker
 
@@ -31,22 +26,19 @@ starefossen/ruby-node base, dependencies include (jekyllBuild.sh):
 * Gemfile inclusions (bundle install)
 * node: uglify
 * node: cleancss
-* zip
-
-# Orchestration
-
-* sharlynn.com.au
-* raptr coreOS
-    * nginx
-    * github webhook reciever
-    * letsencrypt client
+* build artifacts (zip)
 
 # Deploy
 
-* webhook sharlynn.com.au
-    * update to $REF
-                * download release
-                * unzip to /var/www
+see deploy.sh
+
+# Orchestration
+
+* ansible
+* raptr coreOS
+    * nginx
+    * build artifact reciever
+    * letsencrypt client
 
 # Local development with docker
 
@@ -65,3 +57,8 @@ starefossen/ruby-node base, dependencies include (jekyllBuild.sh):
 * why not containers in production?
     * it may be more immutable to have reverse proxy nginx handling letsencrypt and proxying to coreos/nginx A/B for no down time.  Low reward high effort.
     * Use vps and orchestrate with ansible until lets ecrypt works better with containers 
+
+# Testing gitlab
+
+sudo docker pull jekyll/jekyll
+sudo docker run jekyll/jekyll jekyll new myblog
