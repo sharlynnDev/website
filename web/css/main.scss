@@ -12,6 +12,36 @@
 @import "libs/skel";
 @include skel-breakpoints(( desktop: '(min-width: 737px)', tablet: '(min-width: 737px) and (max-width: 1200px)', mobile: '(max-width: 736px)' ));
 @include skel-layout(( reset: 'full', boxModel: 'border', grid: true, conditionals: true, containers: true, breakpoints: ( desktop: ( containers: 1200px, grid: ( gutters: (25px, 25px) ), ), tablet: ( containers: 1000px, ), mobile: ( containers: (100%, true), grid: ( gutters: (15px, 15px) ), ) ) ));
+// Custom
+// quotations
+blockquote {
+font-family: Georgia, serif;
+// font-size: 18px;
+font-style: italic;
+line-height: 1.45;
+position: relative;
+color: #383838;
+}
+blockquote:before {
+// display: block;
+content: "\201C";
+font-size: 30px;
+position: relative;
+// left: -5px;
+// top: -5px;
+color: #7a7a7a;
+}
+blockquote cite {
+color: #999999;
+// font-size: 14px;
+display: block;
+margin-top: 5px;
+}
+ 
+blockquote cite:before {
+content: "\2014 \2009";
+}
+
 
 /* Basic */
 body,
@@ -275,6 +305,14 @@ ul {
 }
 /* Desktop */
 @include breakpoint(desktop) {
+	// custom
+	// 1clarge need to be down scaled
+	.image-style1 {
+		img{
+			width: 282px;
+			height: 242px;
+		}	
+	}
 	/* Basic */
 	h2 {
 		font-size: 2.25em;

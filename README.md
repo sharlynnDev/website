@@ -15,4 +15,20 @@
 * encrypt secrets somehow
 * https://github.com/dimsemenov/PhotoSwipe gallery
 
+# Local Dev
+
+```bash
+# gpg from https://rvm.io/rvm/install
+curl -sSL https://get.rvm.io | bash -s stable
+source /home/matt/.rvm/scripts/rvm
+rvm requirements
+rvm list known
+rvm install 2.4
+rvm use 2.4 --default 
+ruby --version
+gem install bundle jekyll
+cd $src/website/web
+bundle exec jekyll serve
+```
+
 # Reasoning
