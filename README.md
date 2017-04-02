@@ -4,6 +4,7 @@ And instead of using the image of the Aussie Flag use ......use a shot of a sing
 ```
 blog
 missing text
+cant find kangaroo
 hero 3 text longer? (to keep static size)
 log google api AIzaSyAjtf3PPeaQjtjFnVvqkfhyyyk88WJSvBY
 remove api from localhost
@@ -11,6 +12,13 @@ favicon
 google/alt telemetrics
 phone link only on contact page?
 how to deal with contacts page?
+sirvoy logins for dad
+other logins
+--#anchors are /# maybe?
+bump accommodation "varandah and forest" to h3
+remove dvd player (add one more)
+email phone address in contact right hand side
+(07) phone number linkes to +617...
 
 
 # Users
