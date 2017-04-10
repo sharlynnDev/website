@@ -26,6 +26,32 @@ layout: default
                                 </div>
                                 </div>
                                 {% endfor %}
+                                <!-- start loop -->
+                                 <!-- start loop -->
+                                <div class="row blogList">
+                                 
+                                {% for post in site.posts limit: 2 %}
+                                <div class="6u 12u(mobile)">
+                                    <section>
+                                        <h3>{{ post.title }}</h3>
+                                        <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ post.url }}">Read Post...</a></p>
+                                    </section>
+                                </div>
+                                {% endfor %}
+                                   
+                                {% for post in site.posts limit: 2 offset: 2 %}
+                                <div class="6u 12u(mobile)">
+                                    <section>
+                                        <h3>{{ post.title }}</h3>
+                                        <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ post.url }}">Read Post...</a></p>
+                                    </section>
+                                </div>
+                                {% endfor %}
+
+                                </div>
+                                <!-- start loop -->
+
+
                             </div>
                     </section>
                         </div>
