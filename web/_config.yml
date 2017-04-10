@@ -28,3 +28,4 @@ permalink: /blog/:year/:month/:day/:title
 gems: ["jekyll-paginate"]
 paginate: 6
 excerpt_separator: <!--more-->
+future: true

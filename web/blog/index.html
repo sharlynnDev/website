@@ -15,7 +15,7 @@ layout: default
                         <div class="grid-spaced">
                             
                                 <!-- start loop -->
-                                {% for post in site.posts %}
+                                {% for post in site.posts limit: 2 %}
                                 <div class="row">
                                 <div class="12u 12u(mobile)">
                                     <section>
@@ -28,30 +28,44 @@ layout: default
                                 {% endfor %}
                                 <!-- start loop -->
                                  <!-- start loop -->
-                                <div class="row blogList">
                                  
-                                {% for post in site.posts limit: 6 %}
+                                {% for post in site.posts limit: 4 %}
+                                {% assign loopindex = forloop.index | modulo: 2 %}
+                                {% if loopindex == 1 %}
+                                <div class="row blogList">
                                 <div class="6u 12u(mobile)">
                                     <section>
                                         <h3>{{ post.title }}</h3>
                                         <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ post.url }}">Read Post...</a></p>
                                     </section>
                                 </div>
-                                {% endfor %}
+                                {% else %}
                                    
-                                {% for post in site.posts limit: 6 offset: 2 %}
+                                
                                 <div class="6u 12u(mobile)">
                                     <section>
                                         <h3>{{ post.title }}</h3>
                                         <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ post.url }}">Read Post...</a></p>
                                     </section>
                                 </div>
+                                </div>
+                                {% endif %}
                                 {% endfor %}
 
-                                </div>
                                 <!-- start loop -->
 
-
+                                <ul>
+  {% for post in site.posts limit: 4 %}
+ {% assign loopindex = forloop.index | modulo: 2 %}
+  {% if loopindex == 1 %}
+    <div>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+  {% else %}
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </div>
+  {% endif %}
+  {% endfor %}
+</ul>
                             </div>
                     </section>
                         </div>
