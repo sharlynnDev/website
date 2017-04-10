@@ -12,7 +12,7 @@ gem "jekyll"
 # rake required for travis CI
 gem "rake"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-
+gem "jekyll-paginate"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.

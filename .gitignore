@@ -5,3 +5,4 @@ public/
 .bundle/
 builds/
 Gemfile.lock
+.vscode

@@ -24,3 +24,6 @@ url: "https://sharlynn.com.au" # the base hostname & protocol for your site
 
 # Build settings
 permalink: /blog/:year/:month/:day/:title
+# Plugins
+gems: ["jekyll-paginate"]
+paginate: 6
