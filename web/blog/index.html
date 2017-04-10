@@ -30,7 +30,7 @@ layout: default
                                  <!-- start loop -->
                                 <div class="row blogList">
                                  
-                                {% for post in site.posts limit: 2 %}
+                                {% for post in site.posts limit: 6 %}
                                 <div class="6u 12u(mobile)">
                                     <section>
                                         <h3>{{ post.title }}</h3>
@@ -39,7 +39,7 @@ layout: default
                                 </div>
                                 {% endfor %}
                                    
-                                {% for post in site.posts limit: 2 offset: 2 %}
+                                {% for post in site.posts limit: 6 offset: 2 %}
                                 <div class="6u 12u(mobile)">
                                     <section>
                                         <h3>{{ post.title }}</h3>
