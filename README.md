@@ -10,6 +10,9 @@ google/alt telemetrics
 sirvoy logins for dad
 other logins
 
+bfg cleanup of images in _posts
+bfg cleanup of all images
+
 blog--
 search function blog
 recent posts (6)
