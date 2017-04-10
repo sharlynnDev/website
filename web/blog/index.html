@@ -10,7 +10,7 @@ layout: default
                 <div id="content">
                     <section>
                         <header>
-                            <h2>Recent Posts (6 posts paginated)</h2>
+                            <h2>Recent Posts</h2>
                         </header>
                         <div class="grid-spaced">
                             
@@ -22,6 +22,7 @@ layout: default
                                         <h3>{{ post.title }}</h3>
                                         <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ post.url }}">Read Post...</a></p>
                                     </section>
+                                    <hr>
                                 </div>
                                 </div>
                                 {% endfor %}
