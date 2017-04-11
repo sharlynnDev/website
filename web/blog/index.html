@@ -13,39 +13,32 @@ layout: default
                             <h2>Recent Posts</h2>
                         </header>
                         <div class="grid-spaced">
-                            
-    
-                                 <!-- start loop -->
-                                 
-                                {% for post in site.posts limit: 4 %}
-                                {% assign loopindex = forloop.index | modulo: 2 %}
-                                {% if loopindex == 1 %}
-                                <div class="row blogList">
+                            <!-- start loop -->
+                            {% for post in site.posts %}
+                            {% assign loopindex = forloop.index | modulo: 2 %}
+                            {% if loopindex == 1 %}
+                            <div class="row blogList">
                                 <div class="6u 12u(mobile)">
                                     <section>
                                         <h3>{{ post.title }}</h3>
                                         <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ post.url }}">Read Post...</a></p>
                                     </section>
                                 </div>
-                                {% else %}
-                                   
-                                
+                            {% else %}
                                 <div class="6u 12u(mobile)">
                                     <section>
                                         <h3>{{ post.title }}</h3>
                                         <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ post.url }}">Read Post...</a></p>
                                     </section>
                                 </div>
-                                </div>
-                                {% endif %}
-                                {% endfor %}
-
-                                <!-- start loop -->
-
                             </div>
-                    </section>
+                            {% endif %}
+                            {% endfor %}
+                            <!-- end loop -->
                         </div>
-        </div>
+                    </section>
+                </div>
+            </div>
         </div>
     </div>
 </div>

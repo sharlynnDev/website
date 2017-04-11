@@ -3,7 +3,11 @@
 	<!-- Header -->
 	<div class="container">
 		<header id="page-header">
+			{% if page.layout == 'post' %}
+			<h1><a href="index.html" id="logo"><span>Sharlynn</span> Bed &amp; Breakfast<sub> / Blog<sub></a></h1>
+			{% else %}
 			<h1><a href="index.html" id="logo"><span>Sharlynn</span> Bed &amp; Breakfast<sub> / {{ page.title }}<sub></a></h1>
+			{% endif %}
 			<nav id="nav">
 				<ul>
 					<li class="current_page_item" style="white-space: nowrap;"><a href="/">Home</a></li>
