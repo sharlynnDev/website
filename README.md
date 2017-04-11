@@ -9,6 +9,7 @@ favicon
 google/alt telemetrics
 sirvoy logins for dad
 other logins
+email and phone number on contact page linkable phone number. "Navigate"
 
 bfg cleanup of images in _posts
 bfg cleanup of all images
@@ -18,6 +19,8 @@ search function blog
 recent posts (6)
 what's on rhs
 paginator
+blog pages title needs to not show up in nav bar
+6 posts to a page
 --
 # Users
 

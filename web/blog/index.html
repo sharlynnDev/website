@@ -14,19 +14,7 @@ layout: default
                         </header>
                         <div class="grid-spaced">
                             
-                                <!-- start loop -->
-                                {% for post in site.posts limit: 2 %}
-                                <div class="row">
-                                <div class="12u 12u(mobile)">
-                                    <section>
-                                        <h3>{{ post.title }}</h3>
-                                        <p>{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <a href="{{ post.url }}">Read Post...</a></p>
-                                    </section>
-                                    <hr>
-                                </div>
-                                </div>
-                                {% endfor %}
-                                <!-- start loop -->
+    
                                  <!-- start loop -->
                                  
                                 {% for post in site.posts limit: 4 %}
@@ -54,18 +42,6 @@ layout: default
 
                                 <!-- start loop -->
 
-                                <ul>
-  {% for post in site.posts limit: 4 %}
- {% assign loopindex = forloop.index | modulo: 2 %}
-  {% if loopindex == 1 %}
-    <div>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-  {% else %}
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </div>
-  {% endif %}
-  {% endfor %}
-</ul>
                             </div>
                     </section>
                         </div>
