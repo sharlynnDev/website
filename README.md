@@ -8,6 +8,8 @@ flattern readme
 bfg cleanup of images in _posts
 bfg cleanup of all images
 
+pretty urls for blog posts
+
 blog--
 search function blog
 recent posts (6)
