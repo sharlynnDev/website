@@ -4,11 +4,14 @@ remove api from localhost
 favicon
 passwords
 flattern readme
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
 
 bfg cleanup of images in _posts
 bfg cleanup of all images
 
 pretty urls for blog posts
+vertical flexbox for pushed sticky footer
 
 blog--
 search function blog
