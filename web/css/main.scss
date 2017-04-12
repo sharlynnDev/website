@@ -13,6 +13,14 @@
 @include skel-breakpoints(( desktop: '(min-width: 737px)', tablet: '(min-width: 737px) and (max-width: 1200px)', mobile: '(max-width: 736px)' ));
 @include skel-layout(( reset: 'full', boxModel: 'border', grid: true, conditionals: true, containers: true, breakpoints: ( desktop: ( containers: 1200px, grid: ( gutters: (25px, 25px) ), ), tablet: ( containers: 1000px, ), mobile: ( containers: (100%, true), grid: ( gutters: (15px, 15px) ), ) ) ));
 // Custom
+#page-wrapper {
+  	display: flex;
+  	min-height: 100vh;
+  	flex-direction: column;
+}
+#main-wrapper {
+	flex: 1;
+}
 // resize the banner images from blog pages to blog list to column size
 div.row.blogList img {
 	max-width: 100%;
