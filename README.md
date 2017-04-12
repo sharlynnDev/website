@@ -1,6 +1,8 @@
 # TODO
 ```
-remove api from localhost
+remove api from localhost google maps
+check bare domain (24hours)
+cache busting required?
 favicon
 passwords
 flattern readme
@@ -10,8 +12,6 @@ flattern readme
 bfg cleanup of images in _posts
 bfg cleanup of all images
 
-pretty urls for blog posts
-vertical flexbox for pushed sticky footer
 
 blog--
 search function blog
