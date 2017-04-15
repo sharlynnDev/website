@@ -1,7 +1,10 @@
 # TODO
 ```
-remove api from localhost google maps
-check bare domain (24hours)
+
+www cloudfront has to be alias'd to new distro
+naked domain s3 has to be redirected to www.sharlynn.com.au
+check all ttl dns settings
+
 cache busting required?
 favicon
 passwords
@@ -11,7 +14,6 @@ flattern readme
 
 bfg cleanup of images in _posts
 bfg cleanup of all images
-
 
 blog--
 search function blog
@@ -24,6 +26,7 @@ paginator
 # Orchestration
 
 * github + forestry + S3 + Cloudfront + Route53
+* check handover document for more information
 
 # Local Dev
 
