@@ -1,10 +1,6 @@
 # TODO
 ```
-
-www cloudfront has to be alias'd to new distro
-naked domain s3 has to be redirected to www.sharlynn.com.au
-check all ttl dns settings
-
+remove gitpages
 cache busting required?
 favicon
 passwords
