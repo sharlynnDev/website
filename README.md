@@ -1,27 +1,12 @@
-# TODO
-```
-remove gitpages
-cache busting required?
-favicon
-passwords
-flattern readme
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+sharlynn.com.au website.  The website uses jekyll to create a static website.  Forestry.io provides the CMS.  S3 for hosting, with Cloudfront as a CDN.  Lambda functions are used for cache invalidation.  Made for my family, with love from [Matthew](https://github.com/derooy).
 
-bfg cleanup of images in _posts
-bfg cleanup of all images
+Images and icons are not to be used without permission from stay@sharlynn.com.au
 
-blog--
-search function blog
-recent posts (6)
-paginator
-6 posts to a page
---
-```
+The theme requires licensing from [Pixelarity](https://pixelarity.com/)
 
 # Orchestration
 
-* github + forestry + S3 + Cloudfront + Route53
+* github + forestry + S3 + Cloudfront + Route53 + lambda
 * check handover document for more information
 
 # Local Dev
@@ -39,3 +24,16 @@ gem install bundle jekyll
 cd $src/website/web
 bundle exec jekyll serve
 ```
+
+# TODO
+
+* cache invalidation
+* passwords
+* flattern readme
+
+* bfg cleanup of images in _posts
+* bfg cleanup of all images
+
+* search function blog
+* recent posts (6)
+* paginator
